@@ -32,3 +32,28 @@ function _6senseIntegration(){
     } catch(error){
         console.log('error');
     }
+
+
+function pollForObject (pollExpTime,pollInterval){
+    var startTime = new Date().getTime();
+    var lookForObject = setInterval(function() {
+       
+    if (new Date().getTime() - startTime > pollExpTime) {
+       console.log('poll for object has expired');
+        clearInterval(lookForObject);
+    } else {
+        console.log('looking for object');
+        if(window._storagePopulated){
+            console.log('_storagePopulated is true');
+            _6senseIntegration();
+            clearInterval(lookForObject);
+            window["optimizely"].push({
+              "type": "activate"
+            });
+            }           
+        }
+    }, pollInterval);
+}    
+
+pollForObject(5000,50);
+
