@@ -9,6 +9,6 @@ This is an integration between Optimizely and 6sense.
 #### How the integration works:
 This integration polls for the 6sense object stored in local storage. 
 
-####NOTE: This is one of many ways to integrate Optimizely and 6sense. If need additional support do not hesitate to contact your Customer Success Manager or Solutions Architect at Optimizely (or 6sense). 
+####NOTE: This is one of many ways to integrate Optimizely and 6sense. If need additional support, do not hesitate to contact your Customer Success Manager or Solutions Architect at Optimizely (or 6sense). 
 
 
