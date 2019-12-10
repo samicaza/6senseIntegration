@@ -39,12 +39,9 @@ function pollForObject (pollExpTime,pollInterval){
     var lookForObject = setInterval(function() {
        
     if (new Date().getTime() - startTime > pollExpTime) {
-       console.log('poll for object has expired');
         clearInterval(lookForObject);
     } else {
-        console.log('looking for object');
         if(window._storagePopulated){
-            console.log('_storagePopulated is true');
             _6senseIntegration();
             clearInterval(lookForObject);
             window["optimizely"].push({
